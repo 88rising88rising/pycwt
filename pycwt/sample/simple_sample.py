@@ -17,7 +17,8 @@ from pycwt.helpers import find
 # Then, we load the dataset and define some data related parameters. In this
 # case, the first 19 lines of the data file contain meta-data, that we ignore,
 # since we set them manually (*i.e.* title, units).
-url = 'http://paos.colorado.edu/research/wavelets/wave_idl/nino3sst.txt'
+# url = 'http://paos.colorado.edu/research/wavelets/wave_idl/nino3sst.txt'
+url = r'D:\wwh\小波光谱分析\pycwt\pycwt\data\nino3sst.txt'
 dat = numpy.genfromtxt(url, skip_header=19)
 title = 'NINO3 Sea Surface Temperature'
 label = 'NINO3 SST'
