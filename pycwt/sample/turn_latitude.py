@@ -2,10 +2,10 @@ import numpy as np
 
 #转维度
 
-date = [str(l.split()[0]) for l in open("119.txt")]
-cpa = [str(l.split()[2]) for l in open("119.txt")]
-width = [str(l.split()[3]) for l in open("119.txt")]
-remarks = [str(l.split()[12::]) for l in open("119.txt")]
+date = [str(l.split()[0]) for l in open("359.txt")]
+cpa = [str(l.split()[2]) for l in open("359.txt")]
+width = [str(l.split()[3]) for l in open("359.txt")]
+remarks = [str(l.split()[12::]) for l in open("359.txt")]
 date_d = np.array(date)
 cap_d = np.array(cpa)
 width_d = np.array(width)
@@ -37,12 +37,12 @@ for num in float_cpa_all :
         latitude = 0.
         latitude_all.append(latitude)
 
-write_fil= open("119_latitude.txt",'w')
-write_fil_high = open("119_latitude_high.txt",'w')
-write_fil_low= open("119_latitude_low.txt",'w')
+#write_fil= open("119_latitude.txt",'w')
+#write_fil_high = open("119_latitude_high.txt",'w')
+write_fil_low= open("359_latitude_low50.txt",'w')
 for i in range(0,len(date_d)):
-    write_fil.write(str(date_d[i]).center(8)+" "+str(cap_d[i]).center(8)+" "+str(width_d[i]).center(8)+" "+str(latitude_all[i]).center(8)+" "+str(remarks_d[i]).center(20)+" "+'\n')
-    if latitude_all[i] >= -40 and latitude_all[i] <= 40:
+    #write_fil.write(str(date_d[i]).center(8)+" "+str(cap_d[i]).center(8)+" "+str(width_d[i]).center(8)+" "+str(latitude_all[i]).center(8)+" "+str(remarks_d[i]).center(20)+" "+'\n')
+    if latitude_all[i] >= -50 and latitude_all[i] <= 50:
         write_fil_low.write(str(date_d[i]).center(8)+" "+str(cap_d[i]).center(8)+" "+str(width_d[i]).center(8)+" "+str(latitude_all[i]).center(8)+" "+str(remarks_d[i]).center(20)+" "+'\n')
-    if 60 <= latitude_all[i] <= 90 or -90 <= latitude_all[i] <= -60:
-        write_fil_high.write(str(date_d[i]).center(8)+" "+str(cap_d[i]).center(8)+" "+str(width_d[i]).center(8)+" "+str(latitude_all[i]).center(8)+" "+str(remarks_d[i]).center(20)+" "+'\n')
+    #if 60 <= latitude_all[i] <= 90 or -90 <= latitude_all[i] <= -60:
+        #write_fil_high.write(str(date_d[i]).center(8)+" "+str(cap_d[i]).center(8)+" "+str(width_d[i]).center(8)+" "+str(latitude_all[i]).center(8)+" "+str(remarks_d[i]).center(20)+" "+'\n')

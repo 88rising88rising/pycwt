@@ -8,17 +8,18 @@ from datetime import datetime
 # titles = ['All CME', 'Narrow CME', 'Normal CME', 'Partial Halo CME', 'Halo CME']
 # fig, axs = plt.subplots(5, 1, figsize=(10, 10))
 
-# ways = ['359_latitude_low.txt', '359_latitude_high.txt']
-# titles = ['Partial Halo CME Low', 'Partial Halo CME High']
-# fig, axs = plt.subplots(2, 1, figsize=(10, 10))
-
-# ways = ['19_latitude_low.txt', '19_latitude_high.txt']
-# titles = ['Narrow CME Low', 'Narrow CME High']
-# fig, axs = plt.subplots(2, 1, figsize=(10, 10))
-
-ways = ['119_latitude_low.txt', '119_latitude_high.txt']
-titles = ['Normal CME Low', 'Normal CME High']
+ways = ['359_latitude_low50.txt', '359_latitude_high.txt']
+titles = ['Partial Halo CME Low50', 'Partial Halo CME High']
 fig, axs = plt.subplots(2, 1, figsize=(10, 10))
+
+#ways = ['19_latitude_low50.txt', '19_latitude_high.txt']
+#titles = ['Narrow CME Low50', 'Narrow CME High']
+# fig, axs = plt.subplots(2, 1, figsize=(10, 10))
+
+#ways = ['119_latitude_low.txt', '119_latitude_high.txt']
+#ways = ['119_latitude_low50.txt', '119_latitude_high.txt']
+#titles = ['Normal CME Low50', 'Normal CME High']
+#fig, axs = plt.subplots(2, 1, figsize=(10, 10))
 i = 0
 for way in ways:
     dates = []
@@ -45,8 +46,8 @@ for ax in axs.flat:
 plt.tight_layout()  # 调整子图之间的间距
 # plt.savefig('The daily occurrence rate of CMEs.png')
 # plt.savefig('Partial Halo CME Low and High.png')
-# plt.savefig('Narrow CME Low and High.png')
-plt.savefig('Normal CME Low and High.png')
+plt.savefig('Partial Halo Low50 and High.png')
+#plt.savefig('Normal CME Low50 and High.png')
 plt.show()
 
 # with open('19.txt', 'r') as file:
